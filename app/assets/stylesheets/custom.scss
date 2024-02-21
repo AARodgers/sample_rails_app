@@ -5,6 +5,12 @@
 
 $gray-medium-light: #eaeaea;
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 $gray-light: #777;
 
 /* universal */
@@ -72,6 +78,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+
   &:hover {
     color: white;
     text-decoration: none;
@@ -96,6 +103,7 @@ footer {
 
   a {
     color: $gray;
+
     &:hover {
       color: $gray-darker;
     }
@@ -114,4 +122,14 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
